@@ -27,8 +27,8 @@ app.use('/items', require("./routes/items"));
 app.use('/orders', require("./routes/orders"));
 app.use('/checkout', require("./routes/checkout"));
  
-const port = 5000 || process.env.PORT;
+app.set( 'port', ( process.env.PORT || 5000 ));
 
-app.listen(port, ()=>{
+app.listen(app.get( 'port' ), ()=>{
     console.log(`Listening to port ${port}`);
 })
