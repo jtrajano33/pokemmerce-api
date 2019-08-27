@@ -5,7 +5,7 @@ module.exports = ( req, res, next ) => {
         res.json({ mgs: "Please enter all fields"})
     }
 
-    const srcImg = `http://localhost:5000/uploads/${req.file.originalname}`
+    const srcImg = `https://pokemmerce.herokuapp.com/uploads/${req.file.originalname}`
 
     const newItem = new Item({
         name,
